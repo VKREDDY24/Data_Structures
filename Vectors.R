@@ -1,3 +1,5 @@
+#Vector Operations
+
 #Create a variable
 #Create a Vector
 #add a new element to the vector
@@ -65,6 +67,8 @@ class(vector_ex)
 gh
 class(gh)
 
+#Vector index in R starts from 1, unlike most programming languages where the index starts from 0.
+
 
 vector_ex[c(2,3)]<-100
 
@@ -123,4 +127,56 @@ nchar(list_vec)
 
 class(list_vec)
 
+# access all but 1st element
+vector_string[-1] 
 
+# cannot mix positive and negative integers
+vector_string[c(2, -4)]
+
+
+#Using character vector as index
+#This type of indexing is useful when dealing with named vectors. We can name each elements of a vector.
+
+x <- c("first"=3, "second"=0, "third"=9)
+names(x)
+x["second"]
+
+x <- c(-3,-2,-1,0,1,2)
+# modify 2nd element
+x[2] <- 0; x        
+# modify elements less than 0
+x[x<0] <- 5; x   
+# truncate x to first 4 elements
+x <- x[1:4]; x      
+
+
+#How to delete a vector in R?
+x <- c(-3,-2,-1,0,1,2)
+x <- NULL
+x
+x[4] 
+
+# repeat sequence of vector 2 times
+numbers <- rep(c(2,4,6), times = 2)
+
+cat("Using times argument:", numbers)
+
+
+numbers <- c(1, 2, 3, 4, 5)
+
+# iterate through each elements of numbers
+for (number in numbers) {
+  print(number)
+}
+
+#Arithmetic operations
+a <- c(1, 3, 5, 7)    
+b <- c(2, 4, 6, 8)    
+# Perform and print the element-wise operations  
+print(a + b)  # To perform addition  
+print(a - b)  # To perform subtraction  
+
+example_vector <- c(1,2,3)
+
+#+ adds to each value in the vector
+example_vector + 10
