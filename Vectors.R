@@ -184,6 +184,7 @@ example_vector + 10
 example_vector2 <- c(1.6, 2.5, 3.5)
 
 round(example_vector2)
+
 x <- c("R","Is","Fun!")
 y <- c("Kaggle","Is","Fun!")
 
