@@ -198,3 +198,19 @@ original_vector <- c(1, 2, 3, 4, 5)
 # Create a new vector with elements greater than 2
 new_vector <- subset(original_vector, original_vector > 2)
 new_vector
+
+
+# Create a numeric vector of length 5 initialized with zeros
+x = vector("numeric", 5)
+# Print the label for the numeric vector
+print("Numeric Type:")
+# Print the numeric vector
+print(x)
+
+
+
+vector = c()  # Initialize an empty vector
+values = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  # Create a vector containing values from 0 to 9
+for (i in 1:length(values))  # Loop through each element in the 'values' vector
+  vector[i] <- values[i]  # Append each value to the 'vector'
+print(vector)  # Print the final vector containing all values
