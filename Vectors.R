@@ -229,5 +229,14 @@ for (i in 1:length(values))  # Loop through each element in the 'values' vector
   vector[i] <- values[i]  # Append each value to the 'vector'
 print(vector)  # Print the final vector containing all values
 
+# create a vector of strings
+vector1 <- c("Science", "is","fun")
+
+# using paste() and separate vector strings with whitespace
+result1 <- paste(vector1, collapse = " ")
 
 
+my_letters <- c("a","b","c","d","a","a","f")
+
+# Get only those values of my_letters contained within c("a","c")
+my_letters[my_letters %in% c("a","c")]
