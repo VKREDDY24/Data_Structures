@@ -207,6 +207,20 @@ print("Numeric Type:")
 # Print the numeric vector
 print(x)
 
+# Define the first vector
+x = c(10, 20, 30, 20, 20, 25, 29, 26)
+
+# Define the second vector
+y = c(10, 50, 30, 20, 20, 35, 19, 56)
+
+# Define the third vector
+z = c(10, 40, 30, 20, 20, 25, 49, 26)
+
+
+intersect(x,y)
+intersect(x,y,z)
+# Find the common elements among all three vectors
+result = intersect(intersect(x,y),z)
 
 
 vector = c()  # Initialize an empty vector
@@ -214,3 +228,6 @@ values = c(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  # Create a vector containing values fr
 for (i in 1:length(values))  # Loop through each element in the 'values' vector
   vector[i] <- values[i]  # Append each value to the 'vector'
 print(vector)  # Print the final vector containing all values
+
+
+
