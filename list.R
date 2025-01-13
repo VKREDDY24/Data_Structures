@@ -1,6 +1,14 @@
+#A list is a vector but with heterogeneous data elements. A list in R is created with the use of the list() function.
 #creating a list
 list_info <- list("Blue", "Yellow", c(12, 13, 14), TRUE, 13.12, 103.4)
 print(list_info)
+
+# Creating a named list
+my_named_list <- list(name = "Sudheer", age = 25, city = "Delhi")
+
+# Printing the named list
+print(my_named_list)
+
 
 #Naming List Elements
 #Creating  a list which contains a matrix and a vector
@@ -27,4 +35,84 @@ cva <- unlist(lista)
 cvb <- unlist(listb)
 print(cva)
 print(cvb)
+print(is.vector(cvb))
+
+
+
+
+# R program to access
+# components of a list
+
+# Creating a list by naming all its components
+empId = c(1, 2, 3, 4)
+empName = c("Debi", "Sandeep", "Subham", "Shiba")
+numberOfEmp = 4
+empList = list(
+  "ID" = empId,
+  "Names" = empName,
+  "Total Staff" = numberOfEmp
+)
+print(empList)
+
+# Accessing components by names
+cat("Accessing name components using $ command\n")
+print(empList$Names)
+print(empList[[2]])
+print(empList[[1]][4])
+
+empList$`Total Staff` = 5
+empList
+
+
+empList[[1]][5] = 5
+empList[[2]][5] = "Kamala"
+
+cat("After modified the list\n")
+print(empList)
+
+
+# Creating another list
+empAge = c(34, 23, 18, 45)
+
+
+# creating a list
+my_numbers = list(1,5,6,3,3)
+#adding number at the end of list
+append(my_numbers, 45)
+#printing list
+my_numbers
+
+duplicate(my_numbers)
+
+print(empList[-3])
+
+# Deleting a inner level components
+cat("After Deleting sandeep from name\n")
+print(empList[[2]][-2])
+
+
+# Create two lists.
+lst1 <- list(1,2,3)
+lst2 <- list("Sun","Mon","Tue")
+
+# Merge the two lists.
+new_list <- c(lst1,lst2)
+
+# Print the merged list.
+print(new_list)
+Geek_list <- list(c("Geeks", "For", "Geeks"),  
+                  matrix(c(1:9), nrow = 3),  
+                  list("Geek", 12.3)) 
+
+# Naming each element of the list 
+names(Geek_list) <- c("This_is_a_vector",  
+                      "This_is_a_Matrix",  
+                      "This_is_a_listwithin_the_list") 
+# To remove the last element.      
+Geek_list[4] <- NULL
+
+
+
+
+
 
