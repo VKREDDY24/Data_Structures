@@ -180,3 +180,21 @@ example_vector <- c(1,2,3)
 
 #+ adds to each value in the vector
 example_vector + 10
+
+example_vector2 <- c(1.6, 2.5, 3.5)
+
+round(example_vector2)
+x <- c("R","Is","Fun!")
+y <- c("Kaggle","Is","Fun!")
+
+paste(x, y)
+
+# Using dplyr package
+library(dplyr)
+
+# Original vector
+original_vector <- c(1, 2, 3, 4, 5)
+
+# Create a new vector with elements greater than 2
+new_vector <- subset(original_vector, original_vector > 2)
+new_vector
