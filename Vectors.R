@@ -138,6 +138,7 @@ vector_string[c(2, -4)]
 #This type of indexing is useful when dealing with named vectors. We can name each elements of a vector.
 
 x <- c("first"=3, "second"=0, "third"=9)
+is.numeric(x)
 names(x)
 x["second"]
 
@@ -159,19 +160,30 @@ x[4]
 # repeat sequence of vector 2 times
 numbers <- rep(c(2,4,6), times = 2)
 
-cat("Using times argument:", numbers)
+cat("Using times argument:", x[5],numbers)
 
+paste0(x[4],"example string",numbers,vector_string)
+
+cat(x[4],"example string",numbers,vector_string)
+
+
+print("example",numbers)
 
 numbers <- c(1, 2, 3, 4, 5)
-
+length(numbers)
 # iterate through each elements of numbers
-for (number in numbers) {
-  print(number)
-}
+for (i in numbers) {
+  print("ikadaki vachindhi")
+  print(i)
+print("endki vachindhi")
+  }
+
 
 #Arithmetic operations
 a <- c(1, 3, 5, 7)    
-b <- c(2, 4, 6, 8)    
+b <- c(2, 4, 6, 8)  
+
+data.frame(a,b)
 # Perform and print the element-wise operations  
 print(a + b)  # To perform addition  
 print(a - b)  # To perform subtraction  
@@ -189,7 +201,8 @@ x <- c("R","Is","Fun!")
 y <- c("Kaggle","Is","Fun!")
 
 paste(x, y)
-
+paste0(x,y)
+cat(x,y)
 # Using dplyr package
 library(dplyr)
 
