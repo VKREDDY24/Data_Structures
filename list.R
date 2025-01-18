@@ -1,5 +1,26 @@
 #A list is a vector but with heterogeneous data elements. A list in R is created with the use of the list() function.
 #creating a list
+
+
+ist_1 <- list(1,2,3,4,5)
+list_1
+
+a <- c(1,2,5, 5.6)
+b <- c("rshiny" , "ramu" , "sai" , "vijay")
+
+multi_list <- list(1,a,b,0.1)
+multi_list
+names(multi_list) <- c("numeric" , "numeric_vec" , "character_vec" , "decimal")
+#create a variable by loading the a values from the multi list
+multi_list[[2]][3]
+multi_list[2][3]
+cat(multi_list[[3]][2],multi_list[[4]][1],multi_list[[3]][3])
+multi_list$numeric_vec
+class(multi_list$numeric_vec)
+class(a)
+cat(multi_list$character_vec[4],multi_list$numeric_vec[4],multi_list$numeric[1])
+
+
 list_info <- list("Blue", "Yellow", c(12, 13, 14), TRUE, 13.12, 103.4)
 print(list_info)
 
