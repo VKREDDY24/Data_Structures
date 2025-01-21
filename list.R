@@ -133,7 +133,7 @@ names(Geek_list) <- c("This_is_a_vector",
 Geek_list[4] <- NULL
 
 
-
+#to convert from list to vector we should use the unlist() not as.vector()
 
 
 
