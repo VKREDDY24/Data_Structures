@@ -1,3 +1,44 @@
+names_1 <- c("ramu","anjana","vijay","sai")
+marks_1 <- c(1:4)
+logic_1 <- c(TRUE,FALSE,FALSE, TRUE)
+geneder <- c("male", "female", "male", "male")
+subjects <- c("maths", "telugu", "hindi", "english")
+
+class(names_1)
+class(marks_1)
+class(logic_1)
+class(geneder)
+length (logic_1)
+str(logic_1)
+str(names_1)
+str(marks_1)
+summary(geneder)
+summary(marks_1)
+summary(logic_1)
+mean(marks_1)
+mode(marks_1)
+median(marks_1)
+
+# create a data frame
+
+data_fr1 <- data.frame(names_1, marks_1, logic_1, geneder,subjects)
+data_fr1
+length(data_fr1)
+str(data_fr1)
+class(data_fr1)
+summary(data_fr1)
+nchar(data_fr1)
+dim(data_fr1)
+nrow(data_fr1)
+ncol(data_fr1)
+head(data_fr1,2)
+tail(data_fr1,2)
+sort(data_fr1$names_1, decreasing = TRUE)
+
+names(data_fr1)
+colnames(data_fr1)
+rownames(data_fr1)
+
 # R program to create dataframe
 
 # creating a data frame
