@@ -136,4 +136,29 @@ Geek_list[4] <- NULL
 #to convert from list to vector we should use the unlist() not as.vector()
 
 
+# Create a new list containing a vector, text and a matrix
 
+new_list <- list( c(1,2,3), 
+                  "R is Fun!", 
+                  matrix(seq(1,6,1),2,3))
+
+
+new_list <- list(vector = c(1,2,3),         
+                 char_string = "R is Fun!", 
+                 my_matrix = matrix(seq(1,6,1),2,3))
+
+names(new_list)  # Access names
+
+names(new_list) <- c("obj1","obj2","obj3") # Assign new names
+
+new_list[1:2]       # Take a slice of the first 2 objects
+
+new_list[2]    
+
+new_list[["obj3"]]
+
+length(new_list)    # Return the length of a list
+
+str(new_list)       # Get an overview of the list's structure
+
+summary(new_list) 
