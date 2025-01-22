@@ -38,7 +38,16 @@ sort(data_fr1$names_1, decreasing = TRUE)
 names(data_fr1)
 colnames(data_fr1)
 rownames(data_fr1)
-
+print(data_fr1)
+head(data_fr1$names_1,2)
+head(data_fr1[["marks_1"]])
+data_fr1[2:4]
+data_fr2<-data_fr1
+data_fr2
+data_fr2[,3][2]
+data_fr2$logic_1[3]
+data_fr2$place <- c("hyd", "blr","bom", "che")
+data_fr2$place <- NULL
 # R program to create dataframe
 
 # creating a data frame
