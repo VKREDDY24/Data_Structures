@@ -38,16 +38,7 @@ sort(data_fr1$names_1, decreasing = TRUE)
 names(data_fr1)
 colnames(data_fr1)
 rownames(data_fr1)
-print(data_fr1)
-head(data_fr1$names_1,2)
-head(data_fr1[["marks_1"]])
-data_fr1[2:4]
-data_fr2<-data_fr1
-data_fr2
-data_fr2[,3][2]
-data_fr2$logic_1[3]
-data_fr2$place <- c("hyd", "blr","bom", "che")
-data_fr2$place <- NULL
+
 # R program to create dataframe
 
 # creating a data frame
@@ -208,66 +199,5 @@ combined_df <- cbind(df1, df2)
 # Print the combined dataframe
 cat("\nCombined Dataframe:\n")
 print(combined_df)
-ata_fr3 <- data.frame(age = c(24,26,28,30), sex= c("M", "F", "M", "M" ), 
 
-                       race= c("asian", "america", "hispanic","islander"))
-
-data_fr3
-
-data_fr3$subjid <-c(112, 114, 116, 117)
-
-data_fr3
-
-unique(data_fr3)
-
-unique(data_fr3$sex)
-
-factor(data_fr3$race)
-
-head(iris)
-
-install.packages("admiral")
-
- 
-
-library(admiral)
-
-adlb<- admiral::admiral_adlb
-
-dim(adlb)
-
-nrow(adlb)
-
-colnames(adlb)
-
-adlb_1 <- factor(adlb$"RACE")
-
-adlb_1
-
-unique(adlb$"RACE")
-
-levels(adlb$RACE)
-
-factor(adlb$PARAMCD)
-
-unique(adlb$PARAMCD)
-
- 
-
-install.packages("dplyr")
-
- 
-
-library(dplyr)
-
-newrow <- c(34 ,"F","aus", 119 )
-
-data_fr3<- rbind(data_fr3,newrow)
-
-data_fr3
-
-newcol <- c(" ALB", "CA", "K", "BILL","CREAT")
-
-data_fr3<- cbind(data_fr3,newcol)
-
-data_fr3
+#working with Dplyr package
