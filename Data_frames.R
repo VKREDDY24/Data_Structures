@@ -201,3 +201,27 @@ cat("\nCombined Dataframe:\n")
 print(combined_df)
 
 #working with Dplyr package
+#LOAD THE ADLB dataset from the admiral package
+#create a variable with dim 10 obsevarions and selected columns (6)
+
+library(admiral)
+#install.packages(admiral)
+
+adlb <- admiral::admiral_adlb
+colnames(adlb)
+library(dplyr)
+adlb <- dplyr::select(adlb, STUDYID, USUBJID, LBTESTCD, AVAL, PARAMCD, TRT01A)
+dim(adlb)
+adlb1 <- dplyr::sample_n(adlb,10)
+dim(adlb1)
+dplyr::filter(adlb1 , AVAL==38)
+adlb1
+output_dataset <- adlb1 %>%
+  dplyr::arrange(LBTESTCD) %>% 
+  dplyr::mutate(STUDYID = NULL) %>%
+  dplyr::filter(PARAMCD == c("AST","BASO"))%>%
+  dplyr::rename(TRT=TRT01A)%>%
+  dplyr::select(2:5)%>%
+  dplyr::group_by(PARAMCD)%>%z
+  base::mean(AVAL)
+output_dataset
