@@ -51,3 +51,4 @@ mm
 as.Date(ISOdate(yrs, 12, 31))
 as.Date(ISOdate(yrs, 1, 1))
 as.Date(paste(yrs, 1, 1, sep = "-")) # beginning of year
+as.Date(paste(yrs, 12, 31, sep = "-")) # end of year
